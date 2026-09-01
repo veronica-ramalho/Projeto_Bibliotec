@@ -60,6 +60,7 @@ a
 .texto-banner
 {
     height: 100%;
+    align-items: flex-start;
 
     display: flex;
     flex-direction: column;
@@ -72,7 +73,7 @@ a
 .texto-banner p
 {
     font-size: 1.5em;
-    width: 50%;
+    width: 60%;
 }
 
 .botao
@@ -86,6 +87,15 @@ a
 
     font-size: 1.2em;
     font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.botao:hover /* quando passar o mouse por cima */
+{
+    background-color: #2ab2ab;
+    color: var(--branco);
+    /* cursor: pointer; */
 }
 
 .banner-principal img
@@ -93,3 +103,140 @@ a
     align-self: flex-end;
     width: 35%;
 }
+
+/* Título das seções */
+
+.titulo-secao
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 50px;
+}
+
+.titulo-secao h2
+{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.titulo-secao span
+{
+    display: flex;
+    width: 250px;
+    height: 4px;
+    background-color: var(--cor-destaque);
+}
+
+/* Seção beneficios */
+
+.beneficios
+{
+    padding: 50px 120px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 100px;
+}
+
+.beneficios-lista
+{
+    display: grid;
+
+    grid-template-columns: repeat(3, 20%);
+    gap: 10%;
+
+    justify-content: center;
+}
+
+.beneficio
+{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 20px 50px; /* cima -> direita e esquerda -> embaixo*/
+
+    border: 1px solid var(--azul-escuro);
+    border-radius: 30px; /* arredondamento dos cantos */
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25); /* x -> y -> blur -> cor com transparência */
+
+    text-align: center;
+
+    /* Cria referência de posicionamento para o icone, quando o icone for posicionado, usa esse card como referência */
+    /* sem isso, o circulo poderia usar outro elemento da página como referência e sair passeando pelo layout */
+    position: relative;
+}
+
+.beneficio-icone img
+{
+    width: 50%;
+}
+
+.beneficio-icone
+{
+    border: 4px solid var(--cor-destaque);
+    background-color: var(--branco);
+    border-radius: 50%;
+
+    width: 30%;
+    height: 30%;
+
+    /* retira o icoe do fluxo normal, com o ABSOUTE ele pode ficar por cima do card */
+    position: absolute;
+
+    /* Move o circulo para cima, valor negativo faz ele sair parcialmente do card */
+    top: -15%;
+
+    /* Coloca ao começo do elemento em 50% da largura do card */
+    left: 50%;
+
+    /* Ajustamos o posicionamento do elemento mas a borda esquerada do círculo fica no centro, não o circulo ineiro */
+    /* por isso usamos o transform: translateX(-50%); que move o próprio circulo para a esquerda em 50% da lagura 
+    dele, fazendo com que o circulo fique perfeitamente centralizado */
+    transform: translateX(-50%);
+
+    display: grid;
+    place-items: center;
+
+    /* place-items: center; é a mesma coisa que colocar:
+    align-items: center; e justify-items: center; */
+}
+
+.beneficio h3
+{
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    width: 90%;
+}
+
+.beneficio p
+{
+    font-size: 1em;
+    width: 80%;
+}
+
+/* Banner meio */
+
+.banner-meio
+{
+    height: 60vh;
+    background-image: url(../imgs/Banner\ centro.svg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 0 120px;
+    color: var(--branco);
+}
+
