@@ -240,3 +240,45 @@ a
     color: var(--branco);
 }
 
+
+/* Top Livros Recomendados */
+
+.livros-recomendados
+{
+    padding: 50px 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.lista-livros
+{
+    display: grid;
+    grid-template-columns: repeat(4, 20%);
+    gap: 10%;
+    justify-content: center;
+}
+
+.lista-livros h3
+{
+    display: flex;
+    padding-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.lista-livros img
+{
+    height: 312px;
+}
+
+.lista-livros h4,
+.lista-livros p
+{
+    display: grid;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+}
