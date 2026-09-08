@@ -5,6 +5,13 @@
 const campoSenha = document.getElementById("senha");
 const btnSenha = document.querySelector("#mostrar-senha");
 
+console.log(campoSenha.type);
+
 btnSenha.addEventListener("click", function() {
-    alert("Cliquei o botão!");
+    // if(campoSenha.type == "password")
+    //     campoSenha.type = "text";
+    // else
+    //     campoSenha.type = "password";
+
+    campoSenha.type = campoSenha.type == "password" ? "text" : "password"; // ? -> significa sim _____ : -> significa não
 });
