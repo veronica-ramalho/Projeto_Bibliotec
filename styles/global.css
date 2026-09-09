@@ -203,7 +203,7 @@ a
     padding: 30px 60px;
 
     background-color: var(--branco);
-    background-image: url(../../imgs/fundo-telas.svg);
+    background-image: url(../imgs/fundo-telas.svg);
     background-repeat: no-repeat;
     background-size: 70%;
     background-position: right bottom;
