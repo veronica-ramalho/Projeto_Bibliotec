@@ -297,79 +297,77 @@ a
 
 /* FOOTER */
 
-.final
-{
+footer{
     background-color: var(--azul-escuro);
-
-    /* display: grid;
-    grid-template-columns: repeat(3, 460px); */
-    padding: 0px 120px;
+    color: var(--branco);
+    padding: 100px 120px 30px;
 }
 
-.final h4
-{
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodape-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 130px;
+}
+
+.rodape-informacoes {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px;
+}
+
+.nav-footer  {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-footer p {
     color: var(--cor-destaque);
-    padding-top: 100px;
-}
+    margin-bottom: 20px;
 
-.final a
-{
+}
+.nav-footer a {
     color: var(--branco);
-    
-    padding-top: 20px;
-    display: grid;
-    grid-template-rows: repeat(2, 10px);
+    margin-bottom: 10px;
 }
 
-.logos
-{
-    display: grid;
-    grid-template-rows: repeat(2, 165px);
-    padding: 100px;
-}
-
-.redes-sociais img
-{
-    padding: 97px 10px;
-}
-
-.textos-final
-{
-    display: grid;
-    grid-template-columns: repeat(2, 340px);
-}
-
-.footer-cima
-{
-    display: grid;
-    grid-template-columns: repeat(3, 460px);
+.icones {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
 }
 
-.fundo
-{
-    color: var(--branco);
-
+footer span {
     display: flex;
-    flex-direction: row;
-
-    justify-content: space-between;
-
-    padding: 20px;
-}
-
-.canto
-{
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-}
-
-.linha span
-{
-    display: flex;
-    width: 1700px;
+    margin: 50px 0;
+    background-color: white;
     height: 1px;
-    background-color: var(--branco);
+    width: 100%;
+}
+
+.footer-inferior {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.rodape-informacoes p {
+    color: var(--cor-destaque);
+    font-size: 1em;
+    font-weight: 700;
+    width: 100%;
+}
+
+.footer-inferior {
+    display: flex;
 }
